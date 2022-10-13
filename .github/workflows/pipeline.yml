@@ -75,16 +75,6 @@ jobs:
           fetch-depth: 0
         if: ${{ github.event_name == 'push' }}
       - uses: akhileshns/heroku-deploy@v3.12.12
-        name: login
-        run: |
-          cat > ~/.netrc <<EOF
-            machine api.heroku.com
-              login $HEROKU_API_EMAIL
-              password $HEROKU_API_KEY
-            machine git.heroku.com
-              login $HEROKU_API_EMAIL
-              password $HEROKU_API_KEY
-          EOF
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP}}
