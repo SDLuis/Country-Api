@@ -7,7 +7,8 @@
     "start": "node build/src/index.js",
     "build": "tsc",
     "dev": "ts-node-dev src/index.ts",
-    "test:e2e": "npx playwright test"
+    "test:e2e": "npx playwright test",
+    "lint": "ts-standard"
   },
   "keywords": [],
   "author": "",
