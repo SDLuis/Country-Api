@@ -1,3 +1,5 @@
+name: Deployment Pipeline
+
 on: 
   push:
     branches:
@@ -6,15 +8,8 @@ on:
     branches:
       - "master"
     types: [opened, synchronize]
-jobs:
 
-  avoid_reduncy:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Cancel Previous Redundant Builds
-        uses: styfle/cancel-workflow-action@0.9.1
-        with:
-          access_token: ${{ github.token }}
+jobs:
 
   lint:
     runs-on: windows-2022
@@ -69,7 +64,7 @@ jobs:
           path: build
       - name: Test e2e
         run: npm run test:e2e
-        
+
   deploy:
     needs: [test]
     runs-on: windows-2022
