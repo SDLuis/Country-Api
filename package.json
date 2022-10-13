@@ -7,6 +7,7 @@
     "start": "node build/src/index.js",
     "build": "tsc",
     "dev": "ts-node-dev src/index.ts",
+    "start-test": "NODE_ENV=test node build/src/index.js",
     "test:e2e": "npx playwright test",
     "lint": "ts-standard"
   },

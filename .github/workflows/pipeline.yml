@@ -58,6 +58,7 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm ci
+      - uses: microsoft/playwright-github-action@v1
       - uses: actions/download-artifact@v3
         with:
           name: build
@@ -65,4 +66,3 @@ jobs:
       - name: Test e2e
         run: npm run test:e2e
 
- 
