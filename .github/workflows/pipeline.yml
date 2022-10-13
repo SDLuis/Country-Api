@@ -60,22 +60,7 @@ jobs:
       - name: Test e2e
         run: npm ci && npm run test:e2e
 
-  deploy:
-    needs: [test]
-    runs-on: windows-2022
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Deploy to Heroku
-        if: ${{ github.event_name == 'push' }}
-      - uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP}}
-          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
-          healthcheck: "https://${{secrets.HEROKU_APP}}.herokuapp.com"
-          rollbackonhealthcheckfailed: true
+
 
 
   
