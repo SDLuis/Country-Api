@@ -12,6 +12,9 @@ import { devices } from '@playwright/test'
  */
 const config: PlaywrightTestConfig = {
   testDir: './tests',
+  testMatch: ['**.test.ts'],
+  retries: 0,
+  reporter: [['dot'], ['json', { outputFile: 'test-result.json' }]],
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
@@ -27,18 +30,19 @@ const config: PlaywrightTestConfig = {
   /* eslint-disable */
   forbidOnly: !!process.env.CI , 
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://localhost:3000',
-
+    headless: true,
+    channel: 'chrome',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry'
   },
