@@ -58,7 +58,10 @@ jobs:
           node-version: '14'
       - uses: microsoft/playwright-github-action@v1
       - name: Test e2e
-        run: npm ci && npm run test:e2e
+        with:
+          command: npm run test:e2e
+          start: npm run start-test
+          wait-on: http://localhost:5000
 
 
 
