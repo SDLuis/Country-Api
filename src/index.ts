@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 app.use('/country', countryRouter);
 
 app.get("/", (_req, res) => {
-  res.status(200).send("Welcome!");
+  res.status(200).json({Status: "200"});
 });
 
 app.listen(PORT, () => {
