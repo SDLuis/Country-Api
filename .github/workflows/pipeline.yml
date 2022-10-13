@@ -74,11 +74,12 @@ jobs:
         with:
           fetch-depth: 0
         if: ${{ github.event_name == 'push' }}
-      - uses: see/heroku-deploy@master
+      - name: Heroku Review Application
+        uses: yonycalsin/deploy-simple-to-heroku@v2.0.1
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP}}
           heroku_email: ${{secrets.HEROKU_API_EMAIL}}
+          heroku_app_name: ${{secrets.HEROKU_APP}}
 
 
 
