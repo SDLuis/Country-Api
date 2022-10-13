@@ -74,6 +74,21 @@ jobs:
           path: build
       - run: npm run test:e2e
 
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+        if: ${{ github.event_name == 'push' }}
+      - name: Heroku Review Application
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP}}st be unique in Heroku
+          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
+
 
 
   
