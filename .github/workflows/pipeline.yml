@@ -74,10 +74,12 @@ jobs:
         with:
           fetch-depth: 0
         if: ${{ github.event_name == 'push' }}
-      - uses: behe/heroku-build@v1.1
+      - uses: see/heroku-deploy@master
         with:
-          heroku_app_name: ${{secrets.HEROKU_APP}}
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP}}
+          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
+
 
 
   
