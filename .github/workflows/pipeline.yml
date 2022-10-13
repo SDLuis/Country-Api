@@ -75,11 +75,10 @@ jobs:
           fetch-depth: 0
         if: ${{ github.event_name == 'push' }}
       - name: Heroku Review Application
-        uses: yonycalsin/deploy-simple-to-heroku@v2.0.1
+        uses: ElayGelbart/Heroku-Auto-Deployment@v1.0.6
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_email: ${{secrets.HEROKU_API_EMAIL}}
-          heroku_app_name: ${{secrets.HEROKU_APP}}
+          herokuApiKey: ${{ secrets.HEROKU_API_KEY}}
+          herokuAppName: ${{ secrets.HEROKU_APP}}
 
 
 
