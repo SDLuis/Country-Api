@@ -1,0 +1,164 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Luis Tejeda/Desktop/country-api/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Luis Tejeda/Desktop/country-api/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-result.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "C:\\Users\\Luis Tejeda\\Desktop\\country-api\\playwright.config.ts",
+    "rootDir": "C:/Users/Luis Tejeda/Desktop/country-api/tests",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.27.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "example.spec.ts",
+      "file": "example.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Api show corret info",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 28,
+                  "error": {
+                    "message": "apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5000\n=========================== logs ===========================\n→ GET http://localhost:5000/country\n  user-agent: Playwright/1.27.1 (x64; windows 10.0) node/16.16\n  accept: */*\n  accept-encoding: gzip,deflate,br\n============================================================",
+                    "stack": "apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5000\n=========================== logs ===========================\n→ GET http://localhost:5000/country\n  user-agent: Playwright/1.27.1 (x64; windows 10.0) node/16.16\n  accept: */*\n  accept-encoding: gzip,deflate,br\n============================================================\n    at C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts:16:33"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts",
+                        "column": 33,
+                        "line": 16
+                      },
+                      "message": "apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5000\n=========================== logs ===========================\n→ GET http://localhost:5000/country\n  user-agent: Playwright/1.27.1 (x64; windows 10.0) node/16.16\n  accept: */*\n  accept-encoding: gzip,deflate,br\n============================================================\n\n\u001b[90m   at \u001b[39mexample.spec.ts:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m test(\u001b[32m'Api show corret info'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mconst\u001b[39m country \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/country'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mID\u001b[39m\u001b[33m:\u001b[39m number \u001b[33m=\u001b[39m \u001b[35m1\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mName\u001b[39m\u001b[33m:\u001b[39m string \u001b[33m=\u001b[39m \u001b[32m'Afghanistan'\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts:16:33\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2022-10-13T05:12:20.004Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts",
+                    "column": 33,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-7b4f758c8eef206d7e1d",
+          "file": "example.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "api show corret country by name",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 28,
+                  "error": {
+                    "message": "apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5000\n=========================== logs ===========================\n→ GET http://localhost:5000/country/Afghanistan\n  user-agent: Playwright/1.27.1 (x64; windows 10.0) node/16.16\n  accept: */*\n  accept-encoding: gzip,deflate,br\n============================================================",
+                    "stack": "apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5000\n=========================== logs ===========================\n→ GET http://localhost:5000/country/Afghanistan\n  user-agent: Playwright/1.27.1 (x64; windows 10.0) node/16.16\n  accept: */*\n  accept-encoding: gzip,deflate,br\n============================================================\n    at C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts:31:33"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts",
+                        "column": 33,
+                        "line": 31
+                      },
+                      "message": "apiRequestContext.get: connect ECONNREFUSED 127.0.0.1:5000\n=========================== logs ===========================\n→ GET http://localhost:5000/country/Afghanistan\n  user-agent: Playwright/1.27.1 (x64; windows 10.0) node/16.16\n  accept: */*\n  accept-encoding: gzip,deflate,br\n============================================================\n\n\u001b[90m   at \u001b[39mexample.spec.ts:31\n\n\u001b[0m \u001b[90m 29 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mID\u001b[39m\u001b[33m:\u001b[39m number \u001b[33m=\u001b[39m \u001b[35m1\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mName\u001b[39m\u001b[33m:\u001b[39m string \u001b[33m=\u001b[39m \u001b[32m'Afghanistan'\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m country \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m`/country/${Name}`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 33 |\u001b[39m   expect(country\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[0m\n\u001b[0m \u001b[90m 34 |\u001b[39m   expect(\u001b[36mawait\u001b[39m country\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m'id'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mID\u001b[39m)\u001b[0m\n\n\u001b[2m    at C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts:31:33\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2022-10-13T05:12:20.019Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Luis Tejeda\\Desktop\\country-api\\tests\\example.spec.ts",
+                    "column": 33,
+                    "line": 31
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-018697deaffbd1d68ebb",
+          "file": "example.spec.ts",
+          "line": 28,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
