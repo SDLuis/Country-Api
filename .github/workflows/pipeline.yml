@@ -51,7 +51,7 @@ jobs:
           name: build
           path: build
 
-  test:
+  test-e2e:
     needs: [lint, build]
     runs-on: ubuntu-20.04
     steps:
