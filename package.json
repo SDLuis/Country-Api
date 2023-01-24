@@ -2,7 +2,7 @@
   "name": "country-api",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node build/src/index.js",
     "build": "tsc",
